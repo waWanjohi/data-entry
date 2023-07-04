@@ -33,7 +33,6 @@ class APIList(APIView, PaginationHandlerMixin):
     def get_queryset(self, *args, **kwargs):
         """
         This method is used to get the queryset for the view.
-        Will return only active objects from the logged-in user's region
         """
         return self.model_class.objects.all()
 
