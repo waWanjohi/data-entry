@@ -112,6 +112,10 @@ class HealthInstitutionEntryFilter(ReadOnlyModelViewSet):
 
 
 class EventEntryFilter(ReadOnlyModelViewSet):
+    """
+    Get filters used in filtering against
+    EventEntryList APIs
+    """
     queryset = EventEntry.objects.all().prefetch_related()
     serializer_class = EventEntrySerializer
     filter_backends = (filters.DjangoFilterBackend,)
@@ -119,12 +123,20 @@ class EventEntryFilter(ReadOnlyModelViewSet):
 
 
 class ProfessionEntryFilter(ReadOnlyModelViewSet):
+    """
+    Get filters used in filtering against
+    ProfessionEntryList APIs
+    """
     queryset = ProfessionEntry.objects.all().prefetch_related()
     serializer_class = ProfessionEntrySerializer
     filterset_fields = ("name", "occupation", "id")
 
 
 class CategoryFilter(ReadOnlyModelViewSet):
+    """
+    Get filters used in filtering against
+    CustomEntryList APIs
+    """
     queryset = Category.objects.all().prefetch_related()
     serializer_class = CategorySerializer
     filterset_fields = ("name", "id")
