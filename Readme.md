@@ -62,3 +62,10 @@ Link to Documentation
 ----------------------
 
 http://127.0.0.1:8000/docs/
+
+
+
+Database Design:
+
+
+![db_diagram.png](db_diagram.png)
