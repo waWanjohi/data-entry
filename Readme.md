@@ -56,7 +56,7 @@ python manage.py test
 Start local server
 ----------------------
 ``` shell
-python3 manage.py runserver
+python manage.py runserver
 ```
 Link to Documentation
 ----------------------

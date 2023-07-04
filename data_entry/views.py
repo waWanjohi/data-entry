@@ -89,7 +89,7 @@ Add Filter Endpoints for the API
 class HealthInstitutionEntryFilter(ReadOnlyModelViewSet):
     """
     Get filters used in filtering against
-    VehicleList & VehicleAnalytics APIs
+    HealthInstitutionEntryList APIs
     """
 
     queryset = HealthInstitutionEntry.objects.all().prefetch_related()
