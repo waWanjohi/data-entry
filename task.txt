@@ -1,0 +1,31 @@
+You have been assigned to design and develop a RESTful API for a multiuser data entry application. 
+The API should allow for multiple categories of data, including 
+    => Health Institutions 
+    => Professional Details
+    => Event Details 
+with the option to add additional categories as needed. 
+The items within each category should be unique and searchable/filterable. 
+You are expected to research the item's details based on the category.
+
+
+The deliverables for this project include the following:
+- A database design
+- A link to a code repository that includes the API
+- Unit tests with at least 80% test coverage
+- A Readme file explaining how to set up and run the application
+-- Bonus points will be awarded for implementing a CI pipeline or GitHub flow.
+
+
+
+Category
+name, description
+
+OtherCategory:
+name, description, field_values: {}
+
+
+Item:
+name, description, Category, added_by, modified_by, added_on, modified_on, assigned_to, attachments
+
+Filter by: 
+author, unmodified, date_added, name, category, has_attachments
