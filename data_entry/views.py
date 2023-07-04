@@ -62,21 +62,33 @@ class HealthInstitutionEntryDetail(APIDetail):
 
 
 class ProfessionEntryList(APIList):
+    """
+    Get Profession Entries as a paginated list
+    """
     model_class = ProfessionEntry
     serializer_class = ProfessionEntrySerializer
 
 
 class ProfessionEntryDetail(APIDetail):
+    """
+    Get a single Profession Entry
+    """
     model_class = ProfessionEntry
     serializer_class = ProfessionEntrySerializer
 
 
 class EventEntryList(APIList):
+    """
+    Get Event Entries as a paginated list
+    """
     model_class = EventEntry
     serializer_class = EventEntrySerializer
 
 
 class EventEntryDetail(APIDetail):
+    """
+    Get a single Event Entry
+    """
     model_class = EventEntry
     serializer_class = EventEntrySerializer
 
