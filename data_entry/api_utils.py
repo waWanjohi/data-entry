@@ -134,24 +134,3 @@ class APIDetail(APIView):
             {"message": f"{object.__str__()} has been deleted"},
             status=status.HTTP_301_MOVED_PERMANENTLY,
         )
-
-
-@api_view(["POST"])
-def filter_queryset(request, model, serializer):
-
-
-    try:
-        if request.data.created_at:
-            query_set = model.objects.filter(
-                created_at=request.data.date_created
-            )
-            serializer = serializer(query_set, many=True)
-            return Response(serializer.data, status=status.HTTP_200_OK)
-
-        if request.data.name:
-            query_set = model.objects.filter(name=request.data.name)
-            serializer = serializer(query_set, many=True)
-            return Response(serializer.data, status=status.HTTP_200_OK)
-
-    except Exception as e:
-        return f"An Error occurred: {e} "
