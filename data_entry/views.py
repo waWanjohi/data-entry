@@ -104,7 +104,7 @@ class HealthInstitutionEntryFilter(ReadOnlyModelViewSet):
     HealthInstitutionEntryList APIs
     """
 
-    queryset = HealthInstitutionEntry.objects.all().prefetch_related()
+    queryset = HealthInstitutionEntry.objects.prefetch_related().all()
     serializer_class = HealthInstitutionEntrySerializer
     permission_classes = [IsAuthenticated]
     filter_backends = (filters.DjangoFilterBackend,)
@@ -116,7 +116,7 @@ class EventEntryFilter(ReadOnlyModelViewSet):
     Get filters used in filtering against
     EventEntryList APIs
     """
-    queryset = EventEntry.objects.all().prefetch_related()
+    queryset = EventEntry.objects.prefetch_related().all()
     serializer_class = EventEntrySerializer
     filter_backends = (filters.DjangoFilterBackend,)
     filterset_fields = ("event_name", "id")
@@ -127,7 +127,7 @@ class ProfessionEntryFilter(ReadOnlyModelViewSet):
     Get filters used in filtering against
     ProfessionEntryList APIs
     """
-    queryset = ProfessionEntry.objects.all().prefetch_related()
+    queryset = ProfessionEntry.objects.prefetch_related().all()
     serializer_class = ProfessionEntrySerializer
     filterset_fields = ("name", "occupation", "id")
 
@@ -137,7 +137,7 @@ class CategoryFilter(ReadOnlyModelViewSet):
     Get filters used in filtering against
     CustomEntryList APIs
     """
-    queryset = Category.objects.all().prefetch_related()
+    queryset = Category.objects.prefetch_related().all()
     serializer_class = CategorySerializer
     filterset_fields = ("name", "id")
 
@@ -147,6 +147,6 @@ class CustomEntryFilter(ReadOnlyModelViewSet):
     List all custom entries
     """
 
-    queryset = CustomEntry.objects.all().prefetch_related()
+    queryset = CustomEntry.objects.prefetch_related().all()
     serializer_class = CustomEntrySerializer
     filterset_fields = ("name", "id")
