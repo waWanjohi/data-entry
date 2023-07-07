@@ -1,7 +1,7 @@
 from rest_framework.permissions import IsAuthenticated
 from django_filters import rest_framework as filters
 
-from data_entry.api_utils import APIList, APIDetail, filter_queryset
+from data_entry.api_utils import APIList, APIDetail
 from rest_framework.viewsets import ReadOnlyModelViewSet
 from data_entry.models import CustomEntry, Category, HealthInstitutionEntry, ProfessionEntry, EventEntry
 from data_entry.serializers import CustomEntrySerializer, CategorySerializer, HealthInstitutionEntrySerializer, \
